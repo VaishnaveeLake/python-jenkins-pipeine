@@ -1,7 +1,7 @@
 node('master') {
     stage("Fetch Source Code") {
        
-        git ('https://github.com/VaishnaveeLake/python-jenkins-pipeine')
+        git 'https://github.com/VaishnaveeLake/python-jenkins-pipeine'
     }
     
    
