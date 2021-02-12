@@ -4,7 +4,8 @@ node('master') {
         git ([url:'https://github.com/VaishnaveeLake/python-jenkins-pipeine',branch:'add-functions-and-tests'])
     }
     
-  
+    dir('.'){
+        printMessage('Pipleline')
         stage("Testing") {
             bat 'python test_functions.py'
         }
