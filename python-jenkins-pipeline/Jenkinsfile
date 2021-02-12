@@ -1,9 +1,11 @@
 node('master') {
     stage("Fetch Source Code") {
-        git 'https://github.com/VaishnaveeLake/python-jenkins-pipeine'
+        cleanWS()
+        git ([url:'https://github.com/VaishnaveeLake/python-jenkins-pipeine',branch:'add-functions-and-test'])
     }
     
-  
+    dir('.'){
+        printMessage('Runiing pipleline')
         stage("Testing") {
             bat 'python test_functions.py'
         }
